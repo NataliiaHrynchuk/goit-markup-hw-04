@@ -11,6 +11,7 @@
 	--btn-hover-color: #188ce8;
 	--stroke-color: #eeeeee;
 	--line-color: #ececec;
+	--icon-color: #afb1b8;
 }
 
 body {
@@ -92,7 +93,9 @@ span.head {
 .auth-header .list + .list {
 	margin-left: 50px;
 }
+
 .link-mail {
+	display: flex;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
@@ -104,7 +107,18 @@ span.head {
 .link-mail:focus {
 	color: var(--accent-color);
 }
+.header-mail-icon {
+	fill: var(--text-color);
+	align-content: center;
+	margin-right: 10px;
+}
+.link-mail:hover .header-mail-icon,
+.link-mail:focus .header-mail-icon {
+	fill: var(--accent-color);
+}
+
 .link-tel {
+	display: flex;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
@@ -115,6 +129,15 @@ span.head {
 .link-tel:hover,
 .link-tel:focus {
 	color: var(--accent-color);
+}
+.header-tel-icon {
+	fill: var(--text-color);
+	align-content: center;
+	margin-right: 10px;
+}
+.link-tel:hover .header-tel-icon,
+.link-tel:focus .header-tel-icon {
+	fill: var(--accent-color);
 }
 /*------- Шапка--------- */
 
@@ -201,6 +224,17 @@ button {
 .features-section .list:not(:last-child) {
 	margin-right: 30px;
 }
+.features-conteiner {
+	display: flex;
+	width: 270px;
+	height: 120px;
+	background-color: var(--second-bg-color);
+	border-radius: 4px;
+	margin-bottom: 30px;
+	align-items: center;
+	justify-content: center;
+}
+
 .features-title {
 	margin-bottom: 10px;
 	font-weight: 700;
@@ -224,7 +258,8 @@ button {
 	display: flex;
 }
 .about-title,
-.team-title {
+.team-title,
+.client-title {
 	margin-bottom: 50px;
 	font-weight: 700;
 	font-size: 36px;
@@ -251,14 +286,14 @@ button {
 	margin-right: 30px;
 }
 
-.team-section .list {
+.team-section > .list {
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
 }
 .team-card {
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background-color: #fff;
+	background-color: var(--main-color);
 }
 .team-name {
 	margin-bottom: 10px;
@@ -270,13 +305,70 @@ button {
 	color: var(--second-color);
 }
 .team-position {
+	margin-bottom: 16px;
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
 	letter-spacing: 0.03em;
 	color: var(--text-color);
 }
-
+.team-social-list {
+	display: flex;
+	justify-content: center;
+}
+.team-social-item {
+	width: 44px;
+	height: 44px;
+}
+.team-social-list .team-social-item:nth-child(n + 2) {
+	margin-left: 10px;
+}
+.team-social-link {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: var(--main-color);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.team-social-link:hover,
+.team-social-link:focus {
+	background-color: var(--accent-color);
+}
+.team-social-icon {
+	fill: var(--icon-color);
+}
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
+	fill: var(--main-color);
+}
+/*----Постійні клієнти----*/
+.client-section {
+	display: flex;
+	justify-content: space-between;
+}
+.client-logo-link {
+	display: flex;
+	justify-content: center;
+	width: 170px;
+	height: 92px;
+	border: 1px solid var(--icon-color);
+	box-sizing: border-box;
+	border-radius: 4px;
+	align-items: center;
+}
+.client-logo-link:hover {
+	border: 1px solid var(--accent-color);
+}
+.client-logo-link:hover .client-logo-icon {
+	fill: var(--accent-color);
+}
+.client-logo-icon {
+	display: flex;
+	fill: var(--icon-color);
+}
 /*--------Підвал---------*/
 
 footer {
@@ -288,7 +380,12 @@ footer {
 span.foot {
 	color: var(--main-color);
 }
-
+.footer-conteiner {
+	display: flex;
+}
+.address-logo {
+	margin-right: 70px;
+}
 .foot-link {
 	display: block;
 	margin-bottom: 9px;
@@ -336,6 +433,37 @@ span.foot {
 	width: 231px;
 	margin-top: 20px;
 }
+.social-slogan {
+	margin-top: 22px;
+}
+.slogan {
+	width: 145px;
+	height: 16px;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	color: var(--main-color);
+}
+.slogan-social-link {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.1);
+}
+.slogan-social-link:hover,
+.slogan-social-link:focus {
+	background-color: var(--accent-color);
+}
+.slogan-social-icon {
+	fill: var(--main-color);
+}
 /*------------Портфоліо------------*/
 
 .filter-conteiner {
@@ -367,14 +495,13 @@ span.foot {
 .filter-btn:focus {
 	background: var(--accent-color);
 	color: var(--main-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
 }
 .link {
 	text-decoration: none;
 }
-.item:hover,
-.item:focus {
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.6), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .project {
 	display: flex;
 	flex-wrap: wrap;
@@ -392,7 +519,13 @@ span.foot {
 .item:nth-child(3n) {
 	margin-right: 0;
 }
-
+.project-link {
+	display: block;
+}
+.project-link:hover,
+.project-link:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-title {
 	margin-bottom: 4px;
 	font-weight: bold;
@@ -411,8 +544,8 @@ span.foot {
 	color: var(--text-color);
 }
 .project-card {
-	background: #ffffff;
-	border: 1px solid #eeeeee;
+	background: var(--main-color);
+	border: 1px solid var(--stroke-color);
 	box-sizing: border-box;
 	border-top: none;
 	padding-top: 20px;
