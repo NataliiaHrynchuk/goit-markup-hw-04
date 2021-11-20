@@ -360,10 +360,12 @@ button {
 	border-radius: 4px;
 	align-items: center;
 }
-.client-logo-link:hover {
+.client-logo-link:hover,
+.client-logo-link:focus {
 	border: 1px solid var(--accent-color);
 }
-.client-logo-link:hover .client-logo-icon {
+.client-logo-link:hover .client-logo-icon,
+.client-logo-link:focus .client-logo-icon {
 	fill: var(--accent-color);
 }
 .client-logo-icon {
